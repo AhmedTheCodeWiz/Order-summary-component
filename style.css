@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'RedHat';
+    src: url(fonts/RedHatDisplay-VariableFont_wght.ttf);
+}
+:root{
+    --pale: #e0e8ff;
+    --brilliant: 	#3829e0;
+
+    --pale-plus: 	#f5f7ff;
+    --diluted-blue: #7280a7;
+    --abyss: #1f2f56;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'RedHat';
+}
+body{
+    background-color: var(--pale);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.wave{
+    background: url(images/pattern-background-desktop.svg);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-repeat: repeat-x;
+}
+.card{
+    width: 450px;
+    height: 700px;
+    background-color: white;
+    border-radius: 20px;
+    filter: drop-shadow(0 30px 20px rgba(7, 23, 255, .1));
+}
+.hero{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.info{
+    padding: 2rem;
+}
+.title{
+    text-align: center;
+    color: var(--abyss);
+    font-weight: 900;
+    font-size: 28px;
+}
+.description{
+    padding-top: 1rem;
+    line-height: 1.6rem;
+    color: var(--diluted-blue);
+    text-align: center;
+    font-weight: 500;
+}
+.plan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    padding: 28px;
+    margin-top: 2rem;
+    background-color: var(--pale-plus);
+    
+}
+.plan-cost-container{
+    margin-left: -5rem;
+    text-align: left;
+}
+.title-plan{
+    color: var(--abyss);
+    font-size: 1rem;
+    font-weight: 900;
+}
+.cost{
+    color: var(--diluted-blue);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.change {
+    font-size: 1rem;
+    color: var(--brilliant);
+    font-weight: 900;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.9s;
+    
+    &:before {
+      content: "";
+      width: 100%;
+      height: 0.1em;
+      position: absolute;
+      bottom: 0;
+      left: 0; 
+      background: var(--brilliant); 
+      transition: all 0.3s;
+    }
+  
+    &:hover {
+      &:before {
+        width: 0; 
+        background: transparent; 
+      }
+    }
+}
+
+.proceed{
+    padding: 1rem;
+    border-radius: 17px;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: var(--brilliant);
+    font-weight: 600;
+    color: white;
+    filter: drop-shadow(0 8px 20px rgba(7, 23, 255, .3));
+}
+.cancel{
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--diluted-blue);
+}
